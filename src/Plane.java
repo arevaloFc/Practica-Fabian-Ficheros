@@ -39,7 +39,7 @@ public class Plane {
             System.out.println("Estado del sistema de eyección del piloto: Armado");
     }
 
-    public void setSeatOccupation(boolean pilotSeated) {
+    public void setSeatOccupation() {
         seatOccupation = pilotSeated;
     }
 
