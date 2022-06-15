@@ -33,7 +33,7 @@ public class Main {
                     F18.ejectionSystem();
                     break;
                 case "5":
-                    System.out.println("Hola 5");
+                    F18.setSeatOccupation();
                     break;
                 case "Q":
                     System.out.println("Salir del programa");
