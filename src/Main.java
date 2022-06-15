@@ -14,9 +14,6 @@ public class Main {
         BufferedInputStream bufferedInput = null;
         ObjectInputStream objectInput = null;
 
-        Scanner sc = new Scanner(System.in);
-        String opcionUsuario = "";
-
         try {
 
             inputFile = new FileInputStream("data/plane.dat");
