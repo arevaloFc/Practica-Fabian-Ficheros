@@ -27,7 +27,7 @@ public class Main {
                     F18.toggleFlaps();
                     break;
                 case "3":
-                    System.out.println("Hola 3");
+                    F18.toggleLandingGear();
                     break;
                 case "4":
                     System.out.println("Hola 4");
