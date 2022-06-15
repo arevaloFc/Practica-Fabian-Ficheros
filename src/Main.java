@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         boolean salir = false;
-        Plane F18 = new Plane(34f,"camilo","R-red2");
+        Plane F18 = null;
 
         Scanner sc = new Scanner(System.in);
         String opcionUsuario = "";
@@ -21,7 +21,19 @@ public class Main {
 
             switch (opcionUsuario) {
                 case "1":
-                    System.out.println("Hola 1");
+                    System.out.println("Introduzca el número de litros de combustible cargado");
+                    float combustible = sc.nextFloat();
+                    sc.nextLine();
+                    System.out.println("Introduzca apodo del piloto:");
+                    String nombrePiloto = sc.nextLine();
+                    System.out.println("Introduzca número de escuadrón");
+                    String numeroEscuadron = sc.nextLine();
+
+                    F18 = new Plane(combustible,nombrePiloto,numeroEscuadron);
+                    F18.toggleFlaps();
+                    F18.toggleLandingGear();
+                    F18.ejectionSystem();
+                    F18.setSeatOccupation();
                     break;
                 case "2":
                     F18.toggleFlaps();

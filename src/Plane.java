@@ -3,7 +3,7 @@ public class Plane {
     private String pilotCallSign;
     private String squadNumber;
     private boolean flaps = false;
-    private boolean landingGear = false;
+    private boolean landingGear = true;
     private boolean ejectionSystem = true;
     private boolean seatOccupation;
 
