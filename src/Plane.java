@@ -52,14 +52,13 @@ public class Plane implements Serializable {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "fuelLevel=" + fuelLevel +
-                ", pilotCallSign='" + pilotCallSign + '\'' +
-                ", squadNumber='" + squadNumber + '\'' +
-                ", flaps=" + flaps +
-                ", landingGear=" + landingGear +
-                ", ejectionSystem=" + ejectionSystem +
-                ", seatOccupation=" + seatOccupation +
-                '}';
+        return "Plane: " + "\n" +
+                "--> fuelLevel: " + fuelLevel + "\n" +
+                "--> pilotCallSign: " + pilotCallSign + "\n" +
+                "--> squadNumber: " + squadNumber + "\n" +
+                "--> flaps: " + flaps + "\n" +
+                "--> landingGear: " + landingGear + "\n" +
+                "--> ejectionSystem: " + ejectionSystem + "\n" +
+                "--> seatOccupation: " + seatOccupation + "\n";
     }
 }
