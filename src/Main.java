@@ -10,6 +10,37 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String opcionUsuario = "";
 
+        FileInputStream inputFile = null;
+        BufferedInputStream bufferedInput = null;
+        ObjectInputStream objectInput = null;
+
+        Scanner sc = new Scanner(System.in);
+        String opcionUsuario = "";
+
+        try {
+
+            inputFile = new FileInputStream("data/plane.dat");
+            bufferedInput = new BufferedInputStream(inputFile);
+            objectInput = new ObjectInputStream(bufferedInput);
+
+            try {
+                F18 = (Plane) objectInput.readObject();
+                while (true) {
+                    System.out.println(F18);
+                    F18 = (Plane) objectInput.readObject();
+                }
+            } catch (EOFException ex) {
+                System.out.println("Hemos llegado al final del fichero.");
+            } catch (ClassNotFoundException e) {
+                System.out.println("Se ha producido un error al leer un objeto");
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("No se encuentra el archivo");
+        } catch (IOException e) {
+            System.out.println("Se ha producido un error de entrada salida");
+        }
+
         while (!salir) {
             System.out.println("1 - Inicializar F18");
             System.out.println("2 - Alternar estado de los flap");
