@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         boolean salir = false;
+        Plane F18 = new Plane(34f,"camilo","R-red2");
 
         Scanner sc = new Scanner(System.in);
         String opcionUsuario = "";
@@ -23,7 +24,7 @@ public class Main {
                     System.out.println("Hola 1");
                     break;
                 case "2":
-                    System.out.println("Hola 2");
+                    F18.toggleFlaps();
                     break;
                 case "3":
                     System.out.println("Hola 3");
