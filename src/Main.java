@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
@@ -48,7 +49,31 @@ public class Main {
                     F18.setSeatOccupation();
                     break;
                 case "Q":
-                    System.out.println("Salir del programa");
+                    FileOutputStream outputFile = null;
+                    BufferedOutputStream bufferedOutput = null;
+                    ObjectOutputStream objectOutput = null;
+
+                    try {
+                        outputFile = new FileOutputStream("data/plane.dat");
+                        bufferedOutput = new BufferedOutputStream(outputFile);
+                        objectOutput = new ObjectOutputStream(bufferedOutput);
+
+                        objectOutput.writeObject(F18);
+
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } finally {
+                        try {
+                            if (objectOutput != null) objectOutput.close();
+                            if (bufferedOutput != null) bufferedOutput.close();
+                            if (outputFile != null) outputFile.close();
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     salir = true;
                     break;
                 default:
