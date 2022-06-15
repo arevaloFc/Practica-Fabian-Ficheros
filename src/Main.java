@@ -30,7 +30,7 @@ public class Main {
                     F18.toggleLandingGear();
                     break;
                 case "4":
-                    System.out.println("Hola 4");
+                    F18.ejectionSystem();
                     break;
                 case "5":
                     System.out.println("Hola 5");
