@@ -40,7 +40,12 @@ public class Plane {
     }
 
     public void setSeatOccupation() {
+        boolean pilotSeated = ejectionSystem;
         seatOccupation = pilotSeated;
+        if(pilotSeated == false)
+            System.out.println("Asiento ocupado");
+        else
+            System.out.println("Asiento desocupado");
     }
 
     @Override
