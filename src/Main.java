@@ -30,6 +30,11 @@ public class Main {
                     String numeroEscuadron = sc.nextLine();
 
                     F18 = new Plane(combustible,nombrePiloto,numeroEscuadron);
+                    F18 = new Plane(combustible,nombrePiloto,numeroEscuadron);
+                    F18.toggleFlaps();
+                    F18.toggleLandingGear();
+                    F18.ejectionSystem();
+                    F18.setSeatOccupation();
                     break;
                 case "2":
                     F18.toggleFlaps();
