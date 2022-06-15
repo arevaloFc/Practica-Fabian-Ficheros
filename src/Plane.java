@@ -33,6 +33,10 @@ public class Plane {
 
     public void ejectionSystem() {
         ejectionSystem = !ejectionSystem;
+        if(ejectionSystem == false)
+            System.out.println("Estado del sistema de eyección del piloto: Desarmado");
+        else
+            System.out.println("Estado del sistema de eyección del piloto: Armado");
     }
 
     public void setSeatOccupation(boolean pilotSeated) {
