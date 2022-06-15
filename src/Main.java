@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         boolean salir = false;
-        Plane F18 = new Plane(34f,"camilo","R-red2");
+        Plane F18 = null;
 
         Scanner sc = new Scanner(System.in);
         String opcionUsuario = "";
