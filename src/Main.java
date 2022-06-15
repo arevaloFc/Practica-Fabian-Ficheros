@@ -21,7 +21,14 @@ public class Main {
 
             switch (opcionUsuario) {
                 case "1":
-                    System.out.println("Hola 1");
+                    System.out.println("Introduzca el número de litros de combustible cargado");
+                    float combustible = sc.nextFloat();
+                    System.out.println("Introduzca apodo del piloto:");
+                    String nombrePiloto = sc.nextLine();
+                    System.out.println("Introduzca número de escuadrón");
+                    String numeroEscuadron = sc.nextLine();
+
+                    F18 = new Plane(combustible,nombrePiloto,numeroEscuadron);
                     break;
                 case "2":
                     F18.toggleFlaps();
