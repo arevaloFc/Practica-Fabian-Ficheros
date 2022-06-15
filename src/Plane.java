@@ -17,6 +17,10 @@ public class Plane {
 
     public void toggleFlaps() {
         flaps = !flaps;
+        if(flaps == true)
+            System.out.println("Estados de los flaps: Arriba");
+        else
+            System.out.println("Estados de los flaps: Abajo");
     }
 
     public void toggleLandingGear() {
