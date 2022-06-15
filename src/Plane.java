@@ -25,6 +25,10 @@ public class Plane {
 
     public void toggleLandingGear() {
         landingGear = !landingGear;
+        if(landingGear == false)
+            System.out.println("Estado del tren de aterrizaje: Abajo");
+        else
+            System.out.println("Estado del tren de aterrizaje: Arriba");
     }
 
     public void ejectionSystem() {
