@@ -23,6 +23,7 @@ public class Main {
                 case "1":
                     System.out.println("Introduzca el número de litros de combustible cargado");
                     float combustible = sc.nextFloat();
+                    sc.nextLine();
                     System.out.println("Introduzca apodo del piloto:");
                     String nombrePiloto = sc.nextLine();
                     System.out.println("Introduzca número de escuadrón");
